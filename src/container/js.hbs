@@ -1,0 +1,121 @@
+<div>
+    
+    <main>
+        <h1>{{name}}</h1>
+        <hr>
+        <p>Description : {{description}}</p>
+        <p><em>History</em></p>
+        {{#with history}}
+           <b>Year : {{year}} - {{founder}} </b>
+        {{/with}}
+        
+        
+        <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Types
+  </button>
+  {{#each types}}
+  <ul class="dropdown-menu">
+    
+    <li><a class="dropdown-item" href="#">number</a></li>
+    <li><a class="dropdown-item" href="#">string</a></li>
+    <li><a class="dropdown-item" href="#">boolean</a></li>
+    <li><a class="dropdown-item" href="#">null</a></li>
+    <li><a class="dropdown-item" href="#">undefined</a></li>
+    <li><a class="dropdown-item" href="#">symbols</a></li>
+    <li><a class="dropdown-item" href="#">object</a></li>
+    
+  </ul>
+        
+        </div>
+        {{/each}}
+        <br>
+        <hr>
+        <p><b>Syntax</b></p>
+        {{#with syntax}}
+        <ul>
+            <li>Variables : {{variables}}</li>
+            <li>Functions : {{functions}}</li>
+            <li>Conditionals : {{conditionals}}</li>
+            <li>Loops : {{loops}}</li>
+            <li>Classes : {{classes}}</li>
+        </ul>
+        {{/with}}
+        <br>
+         <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Features
+  </button>
+  {{#each features}}
+  <ul class="dropdown-menu">
+    
+    <li><a class="dropdown-item" href="#">'First-class functions'</a></li>
+    <li><a class="dropdown-item" href="#">Closures'</a></li>
+    <li><a class="dropdown-item" href="#">'Dynamic typing'</a></li>
+    <li><a class="dropdown-item" href="#">'Prototype-based inheritance'</a></li>
+    <li><a class="dropdown-item" href="#">'Asynchronous programming with Promises and async/await'</a></li>
+    <li><a class="dropdown-item" href="#">'Modules with import/export statements'</a></li>
+    
+  </ul>
+        </div>
+        {{/each}}
+        <br>
+        <br>
+         <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Libraries
+  </button>
+  {{#each libraries}}
+  <ul class="dropdown-menu">
+    
+    <li><a class="dropdown-item" href="#">'jQuery'</a></li>
+    <li><a class="dropdown-item" href="#">'React'</a></li>
+    <li><a class="dropdown-item" href="#">'Angular'</a></li>
+    <li><a class="dropdown-item" href="#">'Vue'</a></li>
+    <li><a class="dropdown-item" href="#">'Node.js'</a></li>
+    <li><a class="dropdown-item" href="#">'Express.js'</a></li>
+    <li><a class="dropdown-item" href="#">'Lodash'</a></li>
+    <li><a class="dropdown-item" href="#">'Moment.js'</a></li>
+    
+  </ul>
+        
+        </div>
+        {{/each}}
+        <br>
+        <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Tools
+  </button>
+  {{#each tools}}
+  <ul class="dropdown-menu">
+    
+    <li><a class="dropdown-item" href="#">'Babel'</a></li>
+    <li><a class="dropdown-item" href="#">'Webpack'</a></li>
+    <li><a class="dropdown-item" href="#">'ESLint'</a></li>
+    <li><a class="dropdown-item" href="#">'Jest'</a></li>
+    <li><a class="dropdown-item" href="#">'Mocha'</a></li>
+    <li><a class="dropdown-item" href="#">'Chai'</a></li>
+    <li><a class="dropdown-item" href="#">'Selenium'</a></li>
+    <li><a class="dropdown-item" href="#">'Cypress'</a></li>
+    
+  </ul>
+        
+        </div>
+        {{/each}}
+        <em>Community</em>
+            {{#each community}}
+                    <ul>
+                        
+                        <li>Name : {{name}} </li>
+                            <li>Type: {{type}}</li>
+                        
+                        
+                        </ul>
+                    {{/each}}
+                
+        
+
+
+    </main>
+    
+</div>
