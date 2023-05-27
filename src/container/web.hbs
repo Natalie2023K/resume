@@ -9,6 +9,7 @@
                 <em><strong>{{version}}</strong></em>
                 <em>{{description}}</em>
             <hr>
+            
             {{#if elements}}<em>Elements</em>{{/if}}
                 {{#each elements}}
                 
@@ -18,10 +19,11 @@
            <small> {{description}}</small>
             </li>
             </ul>
-            {{#if attributes}}<em>Attributes</em>/{{/if}}
+             <ul>
+            <em>Attributes</em>
                 {{#each attributes}}
                 
-            <ul>
+           
              <li>
                 <b>{{name}}</b>
                 <em>{{description}}</em>
