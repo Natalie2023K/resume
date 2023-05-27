@@ -1,0 +1,88 @@
+<div>
+    <div>
+         <main>
+        {{#with web}}
+        {{#each languages}}
+       
+            <section>
+                <h1>{{name}}</h1>
+                <em><strong>{{version}}</strong></em>
+                <em>{{description}}</em>
+            <hr>
+            {{#if elements}}<em>Elements</em>{{/if}}
+                {{#each elements}}
+                
+            <ul>
+            <li>
+           <strong>{{name}}</strong>
+           <small> {{description}}</small>
+            </li>
+            </ul>
+            {{#if attributes}}<em>Attributes</em>/{{/if}}
+                {{#each attributes}}
+                
+            <ul>
+             <li>
+                <b>{{name}}</b>
+                <em>{{description}}</em>
+             </li>
+               </ul>
+            {{/each}}
+          
+
+
+            {{/each}}
+            
+        
+        <ul>
+            {{#if properties}}<em>Properties</em>{{/if}}
+            {{#each properties}}
+            
+        
+        <li>
+            <b>{{name}}</b>
+            <em>{{description}}</em>
+        </li>
+        <ul>
+            {{#if values}}<b>{{value}}</b>{{/if}}
+        {{#each values}}
+        <li>
+           <b>{{value}}</b>
+           <em>{{description}}</em>
+        </li>
+        {{/each}}
+        </ul>
+        {{/each}}
+        <ul>
+            {{#if functions}}<em>Functions</em>{{/if}}
+            {{#each functions}}
+            
+            
+            <li>
+                <b>{{name}}</b>
+                <em>{{description}}</em>
+            </li>
+            <ul>
+                {{#if parameters}}<em>Parameters</em>{{/if}}
+                {{#each parameters}}
+            
+            
+            <li>
+                <b>{{name}}</b>
+                <b>{{type}}</b>
+                <em>{{description}}</em>
+            </li>
+            {{/each}}
+        </ul>
+            {{/each}}
+        </ul>
+       
+        </ul>
+         
+        </section>
+        {{/each}}
+        
+        {{/with}}
+        </main>
+    </div>
+</div>
