@@ -1,0 +1,199 @@
+<div>
+    <main>
+        <section>
+            <h1>Toyota Camry</h1>
+            <h2><p>Make : {{make}}</p></h2>
+            <h3><p>Model : {{model}}</p></h3>
+            <h4><p><strong>Year - {{year}}</strong></p></h4>
+            <h5><p><em>Color - {{color}}</em></p></h5>
+            </section>
+            <br>
+            <hr>
+            {{#with features}}
+            {{#with interior}}
+            
+                <p><strong>Seats</strong></p>
+                
+            {{#with seats}}
+            <ul>
+              <li> Material - {{material}}</li>
+              <li>Color - {{color}}</li>
+              <li> Heated - 
+                {{#if  heated}} (yes)
+                
+                {{/if}}
+                <li> Ventilated
+                    {{#if ventilated}} (yes)
+                    {{/if}}
+                </li>
+                </ul>
+            {{/with}}
+            <br>
+            <hr>
+            <p><strong>Dashboard</strong></p>
+            {{#with dashboard}}
+              <ul>
+                <li>Material - {{material}}</li>
+                <li>Color - {{color}}</li>
+            </ul>
+            <p><em>Display</em></p>
+            {{#with display}}
+              <ul>
+                <li>Type - {{type}}</li>
+                <li>Size - ({{size}})</li>
+                <li>Resolution - ({{resolution}})</li>
+                <li> Touchscreen
+                    {{#if touchscreen}} - (yes)
+                    {{/if}}
+                </li>
+              </ul>
+            {{/with}}
+           <br>
+            {{/with}}
+            <p><em>Audio</em></p>
+           {{#with audio}}
+           <ul>
+            <li>System - {{system}}</li>
+            <li>Spaekers - {{speakers}}</li>
+            <li>Subwoofer - 
+                {{#if subwoofer}} (yes)
+                {{/if}}
+            </li>
+            <li>Bluetooth - 
+                {{#if bluetooth}} (yes)
+                {{/if}}
+            </li>
+            <li>USB -
+                {{#if USB}} (yes)
+                {{/if}}
+            </li>
+           </ul>
+           {{/with}}
+            {{/with}}
+            <p><strong>Exterior</strong></p>
+            {{#with exterior}}
+            {{#with wheels}}
+            <p><em>Wheels</em></p>
+            <ul>
+                <li>Size - ({{size}})</li>
+                <li>Type - {{type}}</li>
+                <li>Color - {{color}}</li>
+            </ul>
+            {{/with}}
+            {{#with headlights}}
+            <p><em>Headlights</em></p>
+            <ul>
+                <li>Type - {{type}}</li>
+                <li>Brightness - {{brightness}}</li>
+                <li>Automatic - 
+                 {{#if automatic}} (yes)
+                 {{/if}}
+                </li>
+            </ul>
+            {{/with}}
+            {{#with sunroof}}
+            <p><em>Sunroof</em></p>
+            <ul>
+                <li>Type - {{type}}</li>
+                <li>Size - {{size}}</li>
+                <li>Automatic - 
+                    {{#if automatic}} (yes)
+                    {{/if}}
+                </li>
+            </ul>
+            {{/with}}
+            
+            <br>
+            <hr>
+            
+            {{/with}}
+            <p><strong>Safety</strong></p>
+            {{#with safety}}
+            
+            {{#with airbags}}
+            <p><em>Airbags</em></p>
+            <ul>
+                <li>Front - {{front}}</li>
+                <li>Side - {{side}}</li>
+                <li>Knee - {{knee}}</li>
+                <li>Rear - {{rear}}</li>
+            </ul>
+            {{/with}}
+            <p><em>Assistance</em></p>
+            {{#with assistance}}
+            <ul>
+                <li>Blibd Spot Motoring - 
+                    {{#if blind_spot_monitoring}} (yes)
+                    {{/if}}
+                </li>
+                <li>Rear Cross Traffic Alert - 
+                    {{#if rear_cross_traffic_alert}} (yes)
+                    {{/if}}
+                </li>
+                <li>Lane Departure Warning - 
+                    {{#if lane_departure_warning}} (yes)
+                    {{/if}}
+                </li>
+                <li>Adaptive Cruise Control - 
+                    {{#if adaptive_cruise_control}} (yes)
+                    {{/if}}
+                </li>
+                <li>Collision Warning - 
+                    {{#if collision_warning}} (yes)
+                    {{/if}}
+                </li>
+            </ul>
+            {{/with}}
+            {{/with}}
+            {{/with}}
+            <br>
+            <hr>
+            <hr>
+            <p><h5>Engine</h5></p>
+            {{#with engine}}
+            <ul>
+                <li>Type - {{type}}</li>
+                <li>Displacement - {{displacement}}</li>
+                <li>Horsepower - {{horsepower}}</li>
+                <li>Torque - {{torque}}</li>
+            </ul>
+            {{#with transmission}}
+            <p><em>Transmission</em></p>
+            <ul>
+                <li>Type - {{type}}</li>
+                <li>Gears - {{gears}}</li>
+            </ul>
+            {{/with}}
+            {{/with}}
+            <br>
+            <hr>
+            <p><h5>Fuel Economy</h5></p>
+            {{#with fuel_economy}}
+            <ul>
+                <li>City - {{city}}</li>
+                <li>Highway - {{highway}}</li>
+                <li>Combined - {{combined}}</li>
+            </ul>
+            {{/with}}
+            <br>
+            <hr>
+            <hr>
+            <p><h5><em>Price</em></h5></p>
+            {{#with price}}
+            <ul>
+                <li>Base - {{base}}</li>
+                <li>Destination - {{destination}}</li>
+            </ul>
+            {{#with options}}
+            <p><em>Options</em></p>
+            <ul>
+                <li>Navigation : {{navigation}}</li>
+                <li>Moonroof : {{moonroof}}</li>
+                <li>Premium Paint - {{premium_paint}}</li>
+            </ul>
+            {{/with}}
+            <p><strong><em>Total : {{total}}</em></strong></p>
+            {{/with}}
+        
+    </main>
+</div>
