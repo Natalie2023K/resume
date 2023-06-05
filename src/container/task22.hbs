@@ -1,0 +1,91 @@
+
+    <main>
+        {{#with page_header}}
+        <h1 class="text-center">{{title}}</h1>
+        <p class="text-center"><q>{{description}}</q></p>
+        {{/with}}
+        <div class="card">
+  <div class="card-body">
+    {{#with section}}
+    {{#with about_us}}
+    {{#with title_list}}
+    <p class="display-6 text-end">{{main}}</p>
+    <p><h2 class="text-end">{{sub}}</h2></p>
+    {{/with}}
+    <button type="button" class="btn btn-info">{{text}} Show more</button>
+    {{/with}}
+      </div>
+</div>
+    <br>
+    
+    <div class="card">
+  <div class="card-body">
+    {{#with advantage}}
+    <p class="display-5">{{title}}</p>
+      <div class="card">
+  <div class="card-body">
+    {{#with efficiency}}
+    <p><h6>{{title}}</h6></p>
+    <p>{{sub_title}}</p>
+    <p>{{description}}</p>
+    <button type="button" class="btn btn-warning"> Show more</button>
+    </div>
+    </div>
+
+    {{/with}}
+  
+<br>
+<div class="card">
+  <div class="card-body">
+    {{#with innovation}}
+    <p class="display-4 text-muted text-center">{{title}}</p>
+    <p><h6 class="text-muted text-center">{{sub_title}}</h6></p>
+    <p class="text-muted text-center">{{description}}</p>
+    <button type="button" class="btn btn-outline-warning">Show more</button>
+    {{/with}}
+  </div>
+</div>
+<br>
+<div class="card">
+  <div class="card-body">
+    {{#with collaboration}}
+    <p class="display-4 text-muted text-end">{{title}}</p>
+    <p><h6 class="text-muted text-end">{{sub_title}}</h6></p>
+    <p class="text-muted text-end">{{description}}</p>
+    <button type="button" class="btn btn-outline-warning">Show more</button>
+    {{/with}}
+  </div>
+</div>
+
+    {{/with}}
+
+    </div>
+</div>
+<br>
+<div class="card">
+  <div class="card-body">
+    {{#with agreement}}
+    <p class="display-6">{{title}}</p>
+    <div class="card">
+  <div class="card-body">
+    {{#with info}}
+    <p><h5>{{sub_title}}</h5></p>
+   <div class="card">
+    <div class="card-body">
+       {{#with detail}}
+    <p>{{text}}</p>
+    <button type="button" class="btn btn-outline-success">Accept</button>
+    {{/with}}
+    </div>
+   </div>
+    {{/with}}
+  </div>
+</div>
+    {{/with}}
+  </div>
+</div>
+
+
+    {{/with}}
+
+    </main>
