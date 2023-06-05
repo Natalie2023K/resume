@@ -1,0 +1,77 @@
+<div>
+    <main>
+        <section>
+            {{#with heading}}
+            {{#with main}}
+            <p><h1>{{title}}</h1></p>
+            <p><q>{{text}}</q></p>
+            <button type="button" class="btn btn-primary">{{solid}}'Open page'</button>
+            <br>
+            <br>
+            <p><button type="button" class="btn btn-outline-primary">{{outline}} 'Add to cart'</button></p>
+            {{/with}}
+                 <hr>
+            {{#with second}}
+            <p><h2>{{title}}</h2></p>
+            <p><q>{{text}}</q></p>
+            <button type="button" class="btn btn-secondary">{{solid}} 'Open page'</button>
+            <br>
+            <br>
+            <p><button type="button" class="btn btn-outline-secondary">{{outline}}'Add to cart'</button></p>
+            {{/with}}
+            <hr>
+            {{#with subblock}}
+            <p><h3>{{title}}</h3></p>
+            <p><q>{{text}}</q></p>
+            <button type="button" class="btn btn-dark">{{solid}} 'Open page'</button>
+            <br>
+            <br>
+            <p><button type="button" class="btn btn-outline-dark">{{outline}} 'Add to cart'</button></p>
+            {{/with}}
+            {{/with}}
+            <br>
+            <br>
+            <div class="card">
+            <div class="card-body">
+            {{#with nested_display}}
+            <p><h1>{{title}}</h1></p>
+            {{#with children_display}}
+                <p><h2>{{title}}</h2></p>
+                <p><q>{{text}}</q></p>
+                <button type="button" class="btn btn-outline-warning">Open</button>
+            {{/with}}
+            
+            <p><h4>{{header_text}}</h4></p>
+            <p><button type="button" class="btn btn-outline-info">Learn more</button></p>
+            {{/with}}
+            <br>
+            <br>
+             </div>
+              </div>
+              <br>
+              <br>
+              <div class="card">
+              <div class="card-body">
+              {{#with paragraph}}
+              <p><h2>{{title}}</h2></p>
+              <p><q>{{text}}</q></p>
+              <a href="https://google.com" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Open link page</a>
+              <br>
+              <br>
+               <ul>
+              {{#each list_name}}
+              
+                <li>
+                    <a href={{url}} class="btn btn-primary"> <span class='text-primary'></span>{{text}}</span></a>
+                     
+               </li>
+             
+              {{/each}}
+               </ul>
+              {{/with}}
+              </div>
+              </div>
+       
+        </section>
+    </main>
+</div>
