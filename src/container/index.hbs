@@ -4,7 +4,22 @@
  --}}
 <div>
     <main>
-        <div class="text-title">{{title}}</div>
+       <div class="row">
+        <div class="card">
+             <div class="text-title text-center"><h1><b>{{title}}</b></h1></div>
+        <div class="text-title text-center"><h4>{{firstName}} {{lastName}}</h4></div>
+        </div>
+        <h3>{{headList}}</h3>
+        
+          <div class="row">
+              <div class="col-1">
+                {{#each button}}
+        <a href="{{link}}" class="btn btn-primary m-3">{{text}}</a>
+        {{/each}}
+            </div>
+          </div>
+       
+       </div>
     </main>
 </div>
 
