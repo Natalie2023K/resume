@@ -34,13 +34,13 @@ var footer = {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
+// router.get('/', function (req, res) {
+//   // res.render генерує нам HTML сторінку
 
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
-})
+//   //            ↙ cюди вводимо назву файлу з сontainer
+//   res.render('index', {})
+//   //                  ↑↑ сюди вводимо JSON дані
+// })
 
 // ================================================================
 
@@ -3070,5 +3070,108 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
+router.get('/', function (req, res) {
+
+  res.render('index', {
+     layout: 'index',
+     title: 'Resume Project',
+     firstName: 'Natali',
+     lastName: 'Kiril',
+     headList: 'Список сторінок',
+     button: [
+      {
+        text: 'summary',
+        link: '/summary',
+      },
+      {
+        text: 'skills',
+        link: '/skills',
+      },
+      {
+        text: 'education',
+        link: '/education',
+      },
+      {
+        text: 'work',
+        link: '/work',
+      },
+      {
+        text: 'person',
+        link: '/person',
+      },
+      {
+        text: 'bio',
+        link: '/bio',
+      },
+      {
+        text: 'program',
+        link: '/program',
+      },
+      {
+        text: 'web',
+        link: '/web',
+      },
+      {
+        text: 'js',
+        link: '/js',
+      },
+      {
+        text: 'car',
+        link: '/car',
+      },
+      {
+        text: 'mac',
+        link: '/mac',
+      },
+      {
+        text: 'facebook',
+        link: '/facebook',
+      },
+      {
+        text: 'task21',
+        link: '/task21',
+      },
+      {
+        text: 'task22',
+        link: '/task22',
+      },
+      {
+        text: 'task31',
+        link: '/task31',
+      },
+      {
+        text: 'shophome',
+        link: '/shophome',
+      },
+      {
+        text: 'shoporder',
+        link: '/shoporder',
+      },
+      {
+        text: 'shopcart',
+        link: '/shopcart',
+      },
+      {
+        text: 'shopcatalog',
+        link: '/shopcatalog',
+      },
+      {
+        text: 'shopreview',
+        link: '/shopreview',
+      }
+    
+     ]
+
+})
+})
+
+
+
+
+  
+  
+  
+  
+
   // Підключаємо роутер до бек-енду
   module.exports = router
