@@ -1,20 +1,23 @@
 <div>
     <main>
-        <section>
+      <div class="card m-2">
+           <section class="text-center">
             <h1>Toyota Camry</h1>
             <h2><p>Make : {{make}}</p></h2>
             <h3><p>Model : {{model}}</p></h3>
             <h4><p><strong>Year - {{year}}</strong></p></h4>
             <h5><p><em>Color - {{color}}</em></p></h5>
             </section>
-            <br>
-            <hr>
+      </div>
+            
+            
             {{#with features}}
             {{#with interior}}
             
-                <p><strong>Seats</strong></p>
+                <p class="text-center"><strong>Seats</strong></p>
                 
-            {{#with seats}}
+           <div class="card m-2">
+             {{#with seats}}
             <ul>
               <li> Material - {{material}}</li>
               <li>Color - {{color}}</li>
@@ -28,16 +31,19 @@
                 </li>
                 </ul>
             {{/with}}
-            <br>
-            <hr>
-            <p><strong>Dashboard</strong></p>
+           </div>
+            
+            <p class="text-center"><strong>Dashboard</strong></p>
             {{#with dashboard}}
-              <ul>
+             <div class="card">
+                 <ul>
                 <li>Material - {{material}}</li>
                 <li>Color - {{color}}</li>
             </ul>
-            <p><em>Display</em></p>
-            {{#with display}}
+             </div>
+            <p class="text-center"><em>Display</em></p>
+            <div class="card m-2">
+                {{#with display}}
               <ul>
                 <li>Type - {{type}}</li>
                 <li>Size - ({{size}})</li>
@@ -48,10 +54,12 @@
                 </li>
               </ul>
             {{/with}}
+            </div>
            <br>
             {{/with}}
-            <p><em>Audio</em></p>
-           {{#with audio}}
+            <p class="text-center"><em>Audio</em></p>
+          <div class="card">
+             {{#with audio}}
            <ul>
             <li>System - {{system}}</li>
             <li>Spaekers - {{speakers}}</li>
@@ -69,10 +77,12 @@
             </li>
            </ul>
            {{/with}}
+          </div>
             {{/with}}
-            <p><strong>Exterior</strong></p>
+            <p class="text-center"><strong>Exterior</strong></p>
             {{#with exterior}}
-            {{#with wheels}}
+           <div class="card m-2">
+             {{#with wheels}}
             <p><em>Wheels</em></p>
             <ul>
                 <li>Size - ({{size}})</li>
@@ -80,6 +90,7 @@
                 <li>Color - {{color}}</li>
             </ul>
             {{/with}}
+           
             {{#with headlights}}
             <p><em>Headlights</em></p>
             <ul>
@@ -102,15 +113,15 @@
                 </li>
             </ul>
             {{/with}}
+            </div>
             
-            <br>
-            <hr>
             
             {{/with}}
-            <p><strong>Safety</strong></p>
+            <p class="text-center"><strong>Safety</strong></p>
             {{#with safety}}
             
-            {{#with airbags}}
+           <div class="card m-2">
+             {{#with airbags}}
             <p><em>Airbags</em></p>
             <ul>
                 <li>Front - {{front}}</li>
@@ -144,12 +155,13 @@
                 </li>
             </ul>
             {{/with}}
+           </div>
             {{/with}}
             {{/with}}
-            <br>
-            <hr>
-            <hr>
-            <p><h5>Engine</h5></p>
+            
+          
+          <div class="card m-2">
+              <p><h5>Engine</h5></p>
             {{#with engine}}
             <ul>
                 <li>Type - {{type}}</li>
@@ -165,8 +177,8 @@
             </ul>
             {{/with}}
             {{/with}}
-            <br>
-            <hr>
+          </div>
+            
             <p><h5>Fuel Economy</h5></p>
             {{#with fuel_economy}}
             <ul>

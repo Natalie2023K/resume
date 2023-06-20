@@ -7,7 +7,8 @@
             <p><em>Category - {{category}}</em></p>
             <p><h3>Features</h3></p>
             {{#with features}}
-            {{#with processor}}
+            <div class="card m-2">
+                {{#with processor}}
             <p><em>Processor</em></p>
             <ul>
                 <li>Brand - {{brand}}</li>
@@ -51,12 +52,15 @@
                 <li>Memory - {{memory}}</li>
             </ul>
             {{/with}}
+            </div>
             
-            <br>
-            <hr>
+            
+            
             
             <p><h4>Ports</h4></p>
-            <ol>
+
+           <div class="card m-2">
+             <ol>
             {{#each ports}}
             <li>
                 <p><i>Type - {{type}}</i></p>
@@ -73,8 +77,7 @@
             </li>
             {{/each}}
             </ol>
-            <br>
-            <hr>
+            
             <p><em>Battery</em></p>
             {{#with battery}}
             <ul>
@@ -83,6 +86,7 @@
                 <li>Life - {{life}}</li>
             </ul>
             {{/with}}
+           </div>
             <br>
             <hr>
             <p><em>Weight - {{weight}}</em></p>
@@ -101,7 +105,8 @@
              <hr>
              <hr>
              <p><h4>Accessories</h4></p>
-             <ol>
+            <div class="card m-2">
+                 <ol>
              {{#each accessories}}
              <li>
                 <p><i>{{name}}</i></p>
@@ -109,6 +114,7 @@
              </li>
              {{/each}}
                </ol>
+            </div>
             {{/with}}
         </section>
     </main>
